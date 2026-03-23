@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Мия Юки-цубаса — Эвора</title>
+  <link rel="stylesheet" href="../../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../../index.html">Миры</a> → 
+	<a href="../../evora-world.html">Эвора</a> → 
+	<a href="../characters.html">Персонажи</a> → 
+	Мия</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../characters.html" class="back-link">← К списку персонажей</a>
+  
+  <div class="admin-controls" style="justify-content: flex-end;">
+    <button class="admin-btn edit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать
+    </button>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:flex-start;">
+    <div style="flex: 0 0 340px; max-width:400px;">
+      <img 
+        id="main-character-image"
+        src="img/miya1.png" 
+        alt="Мия Юки-цубаса"
+        style="width:100%; border-radius:12px; border:1px solid var(--border); display:block; transition: opacity 0.4s;"
+      >
+
+      <!-- Место для миниатюр (добавляй по мере появления картинок) -->
+      <div class="thumbnails" style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; justify-content: center;">
+        <img src="img/miya1.png" class="thumb active" onclick="changeImage(this)" alt="основная">
+        <!-- примеры будущих картинок — раскомментируй и добавляй по мере необходимости -->
+        <img src="img/miya2.png" class="thumb active" onclick="changeImage(this)" alt="работает">
+		<img src="img/miya3.png" class="thumb active" onclick="changeImage(this)" alt="стоит">
+      </div>
+    </div>
+
+    <div style="flex:1; min-width:320px;">
+      <h1 class="name">Мия Юки-цубаса</h1>
+      <p class="species">Ферлис (ирбис 40% · арктическая лиса 40% · фенрир-волк 20%) CRISPR-гибрид F1</p>
+
+      <dl>
+        <dt>Возраст</dt><dd>19 лет</dd>
+        <dt>Пол</dt><dd>Женский</dd>
+        <dt>Рост</dt><dd>168 см</dd>
+        <dt>Специальность</dt><dd>Биоматериалы и Адаптивные Композиты</dd>
+        <dt>Факультет</dt><dd>Материаловедение и Биомиметика</dd>
+      </dl>
+
+      <div class="section">
+        <h3 class="section-title">Внешность (кратко)</h3>
+        <p>Белоснежная шерсть с серебристым отливом, гетерохромия (синий / изумрудный), сверхдлинный пушистый хвост, термохромный эффект на холоде, сознательный контроль формы зрачков.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Предыстория</h3>
+        <p>Младшая дочь корпорации «Юки-Рики Груп» — лидера в производстве термо- и фотохромных тканей, адаптивной брони и умной одежды. Официально готовится принять отдел R&D.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Характер</h3>
+        <p>Спокойная, наблюдательная, с лёгкой иронией. Кажется холодной, но внутри — азартный исследователь. Не любит, когда её называют «принцессой корпорации». Боится, что её ценят только за фамилию.</p>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Особая способность</h3>
+        <p>Гетерохромный зрачковый контроль — синий глаз лучше видит в сумерках (расширенные зрачки ирбиса), зелёный — днём с повышенной цветовой чёткостью (лисья адаптация). Может переключать фокус между ними сознательно.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Positive Prompt (для генерации)</h3>
+        <pre class="prompt">anthropomorphic female ferlis hybrid, snow leopard 40% arctic fox 40% fenrir wolf 20%, beautiful young woman 19 years old, pure white silver-tinted fur, very long extremely fluffy bushy tail like arctic fox with snow leopard rosettes faintly visible, large rounded ears with black tips and white inner fur, heterochromia eyes one bright icy blue right eye one vivid emerald green left eye, conscious pupil control vertical slit to round, sharp intelligent gaze, small elongated canines, retractable matte white claws, athletic slender build with soft curves, elegant posture, wearing modern university tech casual outfit slim black turtleneck futuristic fabric silver accents lab coat open, confident calm expression with light ironic smile, detailed fluffy fur texture, soft dramatic lighting, cyberpunk university lab background, high detail, masterpiece, best quality, ultra-detailed fur, sharp focus, cinematic lighting</pre>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox / модальное увеличение картинки -->
+<div id="image-lightbox" class="lightbox">
+  <span class="lightbox-close">×</span>
+  <img class="lightbox-content" id="lightbox-img" src="" alt="Увеличенное изображение персонажа">
+</div>
+
+<div class="lightbox-caption" id="lightbox-caption"></div>
+
+<footer>
+  <p>Мия Юки-цубаса — Эвора Био-Тех</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+function changeImage(thumb) {
+  const mainImg = document.getElementById('main-character-image');
+  mainImg.style.opacity = '0';
+  
+  setTimeout(() => {
+    mainImg.src = thumb.src;
+    mainImg.style.opacity = '1';
+    
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }, 300);
+}
+
+// Стили для миниатюр (можно вынести в main.css позже)
+const style = document.createElement('style');
+style.textContent = `
+  .thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  .thumb:hover,
+  .thumb.active {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: scale(1.08);
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+// Lightbox для главной картинки персонажа
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('main-character-image');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  if (!mainImage || !lightbox) return;
+
+  // Клик по главной картинке → открыть lightbox
+  mainImage.style.cursor = 'zoom-in'; // визуальная подсказка
+
+  mainImage.addEventListener('click', () => {
+    lightboxImg.src = mainImage.src;
+    lightboxImg.alt = mainImage.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // блокируем скролл фона
+  });
+
+  // Закрытие
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Клик по фону (вне картинки)
+  lightbox.addEventListener('click', (e) => {
+  // Если кликнули на фон ИЛИ непосредственно на картинку
+  if (e.target === lightboxImg || e.target === closeBtn) {
+    closeLightbox();
+  }
+});
+
+  // Клавиша Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+});
+  document.getElementById('lightbox-caption').textContent = mainImage.alt;
+</script>
+
+<script>
+  document.querySelector('.admin-btn.edit')?.addEventListener('click', () => {
+    alert('Редактирование этой записи — в разработке');
+  });
+</script>
+
+</body>
+</html>

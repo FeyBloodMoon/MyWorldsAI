@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Дополнительная информация — Эвора</title>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../index.html">Миры</a> → 
+	<a href="../evora-world.html">Эвора</a> → 
+	Информация</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../evora-world.html" class="back-link">← Назад к миру Эвора</a>
+
+  <h1>Дополнительная информация</h1>
+  <p style="margin-bottom: 3rem;">Здесь будут собраны общие сведения о мире, правилах, технологиях и обществе Эворы.</p>
+
+  <div class="admin-controls">
+    <button class="admin-btn add" id="add-info-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      Добавить информацию / раздел
+    </button>
+  </div>
+
+  <div class="grid" style="margin-bottom: 4rem;">
+    <a href="hybrid/how-hybrids-work.html" class="card">
+      <div class="card-header">
+        <h2 class="card-name">Как работают гибриды</h2>
+      </div>
+      <div class="card-body">
+        <p>CRISPR-технологии, биореакторы, стерильность F1, второе редактирование, социальное восприятие гибридов и популярные комбинации видов.</p>
+      </div>
+    </a>
+
+    <!-- сюда можно будет добавлять новые карточки -->
+    <!--
+    <a href="locations/locations.html" class="card">...</a>
+    <a href="corporations/corporations.html" class="card">...</a>
+    -->
+  </div>
+
+  <h2 style="margin-top: 4rem;">Пока доступно:</h2>
+
+  <div class="section">
+    <h3 class="section-title">Как работают гибриды в Эвора</h3>
+    <p>Естественное размножение между разными видами невозможно — хромосомы не совпадают (львы 38, дракониды 42, мотыльки 56). Поэтому:</p>
+    <ul style="margin: 1.2rem 0 1.8rem 1.8rem; line-height: 1.7;">
+      <li>Все гибриды = лабораторные CRISPR-гибриды.</li>
+      <li>Родители сдают яйцеклетку/сперму → генетики в клинике «Нексус-Ген» вырезают и вставляют нужные гены (когти + крылья + люминесцентные чешуйки).</li>
+      <li>Эмбрион выращивается в биореакторе 9 месяцев (или 4 у насекомых).</li>
+      <li>F1-гибриды почти всегда стерильны (как мулы), но с 18 лет могут пройти «второе редактирование» и стать fertile.</li>
+      <li>Популярные комбо: кото-драко, вольф-лай (волк+мотылёк), лев-рептилоид, панда-акула.</li>
+    </ul>
+    <p><strong>Социально:</strong> гибриды = статус «прогрессивный», но чистокровные иногда называют их «конструктами» и недолюбливают.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>Эвора Био-Тех — справочная информация</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+  document.getElementById('add-info-btn')?.addEventListener('click', () => {
+    alert('Добавление новой статьи/раздела информации (технологии, локации, правила и т.д.) — в разработке');
+  });
+</script>
+
+</body>
+</html>

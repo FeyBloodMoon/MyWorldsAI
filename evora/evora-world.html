@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Эвора Био-Тех — Академия и мир</title>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../index.html">Миры</a> → 
+	Эвора</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../index.html" class="back-link">← На главную</a>
+
+  <h1>Мир Эвора Био-Тех</h1>
+  <p>Академия генетической инженерии и биомиметики. Гибриды, созданные с помощью CRISPR, учатся, исследуют и пытаются найти своё место между корпорациями, природой и свободой.</p>
+  
+  <div class="admin-controls">
+    <button class="admin-btn edit" id="edit-world-evo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать описание мира
+    </button>
+  
+    <button class="admin-btn add" id="add-section-evo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      Добавить раздел
+    </button>
+  </div>
+
+  <div class="grid">
+      <a href="characters/characters.html" class="card">
+        <div class="card-body">
+          <h3 class="card-name">Персонажи</h3>
+          <p>Интересныые персонажи</p>
+        </div>
+      </a>
+	  
+	  <a href="info/other-information.html" class="card">
+        <div class="card-body">
+          <h3 class="card-name">Дополнительная информация</h3>
+          <p>локации, фракции, технологии...</p>
+        </div>
+      </a>
+  </div>
+</main>
+
+<footer>
+  <p>Эвора Био-Тех</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+  document.getElementById('edit-world-evo')?.addEventListener('click', () => {
+    alert('Редактирование описания мира "Эвора" — в разработке');
+  });
+
+  document.getElementById('add-section-evo')?.addEventListener('click', () => {
+    alert('Добавление нового раздела (локация/фракция/технология) — в разработке');
+  });
+</script>
+
+</body>
+</html>

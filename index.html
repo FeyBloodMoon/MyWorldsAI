@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Миры & Персонажи</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title">Миры</h1>
+    <div>
+      <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Доступные миры</h1>
+  
+  <div class="admin-controls">
+    <button class="admin-btn add" id="add-world-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      Добавить мир
+    </button>
+  </div>
+  
+  <div class="grid" style="margin-top: 2.5rem;">
+    <a href="evora/evora-world.html" class="card">
+      <div class="card-header">
+        <h2 class="card-name">Эвора Био-Тех</h2>
+      </div>
+      <div class="card-body">
+        <p>Мир генетических гибридов, академии и высоких технологий адаптации под экстремальные условия.</p>
+      </div>
+    </a>
+
+    <a href="worldNUN.html" class="card">
+      <div class="card-header">
+        <h2 class="card-name">Мир NUN (шаблон)</h2>
+      </div>
+      <div class="card-body">
+        <p>Пример заготовки под новый мир</p>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025–2026 — Личный лор-проект</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+  document.getElementById('add-world-btn')?.addEventListener('click', () => {
+    alert('Функция добавления нового мира в разработке.\nВ будущем здесь будет форма создания нового мира.');
+    // или: window.location.href = '/admin/new-world.html';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Лираэль Снежнокрыл — Эвора</title>
+  <link rel="stylesheet" href="../../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../../index.html">Миры</a> → 
+	<a href="../../evora-world.html">Эвора</a> → 
+	<a href="../characters.html">Персонажи</a> → 
+	Лираэль</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../characters.html" class="back-link">← К списку персонажей</a>
+  
+  <div class="admin-controls" style="justify-content: flex-end;">
+    <button class="admin-btn edit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать
+    </button>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:flex-start;">
+    
+    <!-- Блок с основной картинкой и местом под галерею -->
+    <div style="flex: 0 0 340px; max-width:400px;">
+      <img 
+        id="main-character-image"
+        src="img/lyrael1.png" 
+        alt="Лираэль Снежнокрыл"
+        style="width:100%; border-radius:12px; border:1px solid var(--border); display:block; transition: opacity 0.4s;"
+      >
+
+      <!-- Место для миниатюр (добавляй по мере появления картинок) -->
+      <div class="thumbnails" style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; justify-content: center;">
+        <img src="img/lyrael1.png"     class="thumb active" onclick="changeImage(this)" alt="основная">
+        <!-- примеры будущих картинок — раскомментируй и добавляй по мере необходимости -->
+        <img src="img/lyrael2.png"   class="thumb" onclick="changeImage(this)" alt="стоит">
+        <img src="img/lyrael3.png" class="thumb" onclick="changeImage(this)" alt="работает">
+        <img src="img/lyrael4.png"     class="thumb" onclick="changeImage(this)" alt="спит">
+      </div>
+    </div>
+
+    <div style="flex:1; min-width:320px;">
+      <h1 class="name">Лираэль Снежнокрыл</h1>
+      <p class="species">Мотакон (мотылёк 50% + белый дракон 50%) CRISPR-гибрид</p>
+
+      <dl>
+        <dt>Возраст</dt><dd>19 лет</dd>
+        <dt>Пол</dt><dd>Женский</dd>
+        <dt>Рост</dt><dd>172 см (в стойке, без учёта рогов)</dd>
+        <dt>Специальность</dt><dd>Аэро- и Высотная Биомеханика</dd>
+        <dt>Факультет</dt><dd>Высотные Адаптации и Экстремальная Биомеханика</dd>
+      </dl>
+
+      <div class="section">
+        <h3 class="section-title">Внешность (кратко)</h3>
+        <p>Белоснежные перламутровые чешуйки + мягкий арктический пушок, крупные полупрозрачные крылья мотылька (размах ~2.8–3 м) с серебристыми прожилками и глазками, длинный гибкий хвост с пушистой кисточкой, короткие светящиеся рога, фасеточные серебристо-голубые глаза, чувствительные антенны.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Предыстория</h3>
+        <p>Родилась и выросла в высокогорной автономии Снежных Хребтов. Первый раз покинула родные пики ради учёбы в Академии Эвора. До сих пор испытывает культурный шок от шума и плотности населения большого города.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Характер</h3>
+        <p>Спокойная, наблюдательная, немного замкнутая из-за горного воспитания и культурного шока. Говорит мало, но очень точно. Избегает лишнего внимания, зато чрезвычайно внимательна к деталям — особенно к потокам воздуха и ветру. Внутри очень любопытна и упряма, когда дело доходит до науки или полёта.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Особая способность</h3>
+        <p>Крио-термальные крылья: железы выделяют летучую жидкость, которая при полёте испаряется → создаёт охлаждающий микротурбулентный слой (снижение сопротивления на 22–28%). В экстренных случаях может выпустить пар для кратковременной маскировки силуэта в холодном воздухе.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Positive Prompt (для генерации)</h3>
+        <pre class="prompt">masterpiece, best quality, highly detailed, female anthropomorphic moth-dragon hybrid, 50/50 moth and white dragon, elegant slender build, pure white coloration, soft white scales with pearlescent sheen, fluffy white arctic fur on shoulders thighs back neck, large semi-transparent moth wings spread, delicate translucent membranes, silver-white veins and subtle eye-spots on wings, long flexible dragon tail with fluffy white tuft at end, short curved white horns glowing faintly blue, large faceted silver-blue eyes with vertical slit pupils, sensitive white fluffy antennae, ethereal icy atmosphere, soft cold glow, beautiful mysterious expression, sci-fi fantasy university student aesthetic, detailed fur texture, scales details, wing veins, cinematic lighting, high resolution, artstation trending</pre>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox / модальное увеличение картинки -->
+<div id="image-lightbox" class="lightbox">
+  <span class="lightbox-close">×</span>
+  <img class="lightbox-content" id="lightbox-img" src="" alt="Увеличенное изображение персонажа">
+</div>
+
+<div class="lightbox-caption" id="lightbox-caption"></div>
+
+<footer>
+  <p>Лираэль Снежнокрыл — Эвора Био-Тех</p>
+</footer>
+
+<!-- Переключатель темы -->
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<!-- Скрипт для смены картинки по клику на миниатюру -->
+<script>
+function changeImage(thumb) {
+  const mainImg = document.getElementById('main-character-image');
+  mainImg.style.opacity = '0';
+  
+  setTimeout(() => {
+    mainImg.src = thumb.src;
+    mainImg.style.opacity = '1';
+    
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }, 300);
+}
+
+// Стили для миниатюр (можно вынести в main.css позже)
+const style = document.createElement('style');
+style.textContent = `
+  .thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  .thumb:hover,
+  .thumb.active {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: scale(1.08);
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+// Lightbox для главной картинки персонажа
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('main-character-image');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  if (!mainImage || !lightbox) return;
+
+  // Клик по главной картинке → открыть lightbox
+  mainImage.style.cursor = 'zoom-in'; // визуальная подсказка
+
+  mainImage.addEventListener('click', () => {
+    lightboxImg.src = mainImage.src;
+    lightboxImg.alt = mainImage.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // блокируем скролл фона
+  });
+
+  // Закрытие
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Клик по фону (вне картинки)
+  lightbox.addEventListener('click', (e) => {
+  // Если кликнули на фон ИЛИ непосредственно на картинку
+  if (e.target === lightboxImg || e.target === closeBtn) {
+    closeLightbox();
+  }
+});
+
+  // Клавиша Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+});
+  document.getElementById('lightbox-caption').textContent = mainImage.alt;
+</script>
+
+<script>
+  document.querySelector('.admin-btn.edit')?.addEventListener('click', () => {
+    alert('Редактирование этой записи — в разработке');
+  });
+</script>
+
+</body>
+</html>

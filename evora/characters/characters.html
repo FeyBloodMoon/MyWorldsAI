@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Персонажи — Эвора</title>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../index.html">Миры</a> → 
+	<a href="../evora-world.html">Эвора</a> → 
+	Персонажи</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../evora-world.html" class="back-link">← Назад к миру Эвора</a>
+
+  <h1>Персонажи Академии Эвора</h1>
+  
+  <div class="admin-controls">
+    <button class="admin-btn add" id="add-character-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      Добавить персонажа
+    </button>
+  </div>
+
+  <div class="grid">
+    <a href="miya/miya.html" class="card">
+      <img src="miya/img/miya1.png" alt="Мия Юки-цубаса" style="width:100%; height:auto; display:block;">
+      <div class="card-body">
+        <h3 class="card-name">Мия Юки-цубаса</h3>
+        <p class="card-species">Ферлис (ирбис 40% · арктическая лиса 40% · фенрир-волк 20%)</p>
+        <p>Наследница корпорации термо- и фотохромных материалов. Биоматериалы и адаптивные композиты.</p>
+      </div>
+    </a>
+
+    <a href="lyrael/lyrael.html" class="card">
+      <img src="lyrael/img/lyrael1.png" alt="Лираэль Снежнокрыл" style="width:100%; height:auto; display:block;">
+      <div class="card-body">
+        <h3 class="card-name">Лираэль Снежнокрыл</h3>
+        <p class="card-species">Мотакон (мотылёк 50% + белый дракон 50%)</p>
+        <p>Аэродинамика и высотная биомеханика. Перевод из высокогорной автономии.</p>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>Эвора — персонажи</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+  document.getElementById('add-character-btn')?.addEventListener('click', () => {
+    alert('Функция добавления нового персонажа в разработке.\nВ будущем — форма с полями: имя, вид, промпт, фото и т.д.');
+  });
+</script>
+
+</body>
+</html>
