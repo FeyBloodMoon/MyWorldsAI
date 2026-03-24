@@ -3,59 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Миры & Персонажи</title>
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <title>World мир</title>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWorlds" />
-  <link rel="manifest" href="img/site.webmanifest" />
+  <link rel="manifest" href="../img/site.webmanifest" />
 </head>
 <body>
 
 <header>
   <div class="nav-container">
-    <h1 class="site-title">Миры</h1>
-    <div>
-      <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
-    </div>
+    <h1 class="site-title"><a href="../index.html">Миры</a> → 
+	World</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
   </div>
 </header>
 
 <main>
-  <h1>Доступные миры</h1>
+  <a href="../index.html" class="back-link">← На главную</a>
+
+  <h1>Мир World</h1>
+  <p>Описание мира</p>
   
   <div class="admin-controls">
-    <button class="admin-btn add" id="add-world-btn">
+    <button class="admin-btn edit" id="edit-world-evo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать описание мира
+    </button>
+  
+    <button class="admin-btn add" id="add-section-evo">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-      Добавить мир
+      Добавить раздел
     </button>
   </div>
-  
-  <div class="grid" style="margin-top: 2.5rem;">
-    <a href="evora/evora-world.html" class="card">
-      <div class="card-header">
-        <h2 class="card-name">Эвора Био-Тех</h2>
-      </div>
-      <div class="card-body">
-        <p>Мир генетических гибридов, академии и высоких технологий адаптации под экстремальные условия.</p>
-      </div>
-    </a>
 
-    <a href="Golden Circle/goldencircle.html" class="card">
-      <div class="card-header">
-        <h2 class="card-name">Золотой круг</h2>
-      </div>
-      <div class="card-body">
-        <p>В Золотом Круге Аэлира разорённые аристократы в мифриле торгуют на равных с гоблинами, демонами и драконидами, поднимаясь от тележки у пристани до Великого Магистра Торговли.</p>
-      </div>
-    </a>
+  <div class="grid">
+      <a href="characters/characters.html" class="card">
+        <div class="card-body">
+          <h3 class="card-name">Персонажи</h3>
+          <p>Интересныые персонажи</p>
+        </div>
+      </a>
+	  
+	  <a href="info/other-information.html" class="card">
+        <div class="card-body">
+          <h3 class="card-name">Дополнительная информация</h3>
+          <p>локации, фракции, технологии...</p>
+        </div>
+      </a>
   </div>
 </main>
 
 <footer>
-  <p>© 2025–2026 — Личный лор-проект</p>
+  <p>World</p>
 </footer>
 
 <script>
@@ -113,9 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-  document.getElementById('add-world-btn')?.addEventListener('click', () => {
-    alert('Функция добавления нового мира в разработке.\nВ будущем здесь будет форма создания нового мира.');
-    // или: window.location.href = '/admin/new-world.html';
+  document.getElementById('edit-world-evo')?.addEventListener('click', () => {
+    alert('Редактирование описания мира "Эвора" — в разработке');
+  });
+
+  document.getElementById('add-section-evo')?.addEventListener('click', () => {
+    alert('Добавление нового раздела (локация/фракция/технология) — в разработке');
   });
 </script>
 

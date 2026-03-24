@@ -3,59 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Миры & Персонажи</title>
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <title>Персонажи — Золотой круг</title>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWorlds" />
-  <link rel="manifest" href="img/site.webmanifest" />
+  <link rel="manifest" href="../../img/site.webmanifest" />
 </head>
 <body>
 
 <header>
   <div class="nav-container">
-    <h1 class="site-title">Миры</h1>
-    <div>
-      <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
-    </div>
+    <h1 class="site-title"><a href="../../index.html">Миры</a> → 
+	<a href="../goldencircle.html">Золотой круг</a> → 
+	Персонажи</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
   </div>
 </header>
 
 <main>
-  <h1>Доступные миры</h1>
+  <a href="../goldencircle.html" class="back-link">← Назад к миру Золотой круг</a>
+
+  <h1>Персонажи Золотого круга</h1>
   
   <div class="admin-controls">
-    <button class="admin-btn add" id="add-world-btn">
+    <button class="admin-btn add" id="add-character-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-      Добавить мир
+      Добавить персонажа
     </button>
   </div>
-  
-  <div class="grid" style="margin-top: 2.5rem;">
-    <a href="evora/evora-world.html" class="card">
-      <div class="card-header">
-        <h2 class="card-name">Эвора Био-Тех</h2>
-      </div>
-      <div class="card-body">
-        <p>Мир генетических гибридов, академии и высоких технологий адаптации под экстремальные условия.</p>
-      </div>
-    </a>
 
-    <a href="Golden Circle/goldencircle.html" class="card">
-      <div class="card-header">
-        <h2 class="card-name">Золотой круг</h2>
-      </div>
+  <div class="grid">
+    <a href="evelyn/evelyn.html" class="card">
+      <img src="evelyn/img/evelyn1.png" alt="Evelyn" style="width:100%; height:auto; display:block;">
       <div class="card-body">
-        <p>В Золотом Круге Аэлира разорённые аристократы в мифриле торгуют на равных с гоблинами, демонами и драконидами, поднимаясь от тележки у пристани до Великого Магистра Торговли.</p>
+        <h3 class="card-name">Эвелин Блэкхарт</h3>
+        <p class="card-species">Совлин</p>
+        <p>Эвелин Блэкхарт — последний представитель некогда могущественного рода хранителей рунической магии из северных предгорий Королевства Аэлир.</p>
       </div>
     </a>
+	
   </div>
 </main>
 
 <footer>
-  <p>© 2025–2026 — Личный лор-проект</p>
+  <p>Золотой круг — персонажи</p>
 </footer>
 
 <script>
@@ -113,9 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-  document.getElementById('add-world-btn')?.addEventListener('click', () => {
-    alert('Функция добавления нового мира в разработке.\nВ будущем здесь будет форма создания нового мира.');
-    // или: window.location.href = '/admin/new-world.html';
+  document.getElementById('add-character-btn')?.addEventListener('click', () => {
+    alert('Функция добавления нового персонажа в разработке.\nВ будущем — форма с полями: имя, вид, промпт, фото и т.д.');
   });
 </script>
 

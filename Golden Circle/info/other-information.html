@@ -3,59 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Миры & Персонажи</title>
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <title>Дополнительная информация — World</title>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWorlds" />
-  <link rel="manifest" href="img/site.webmanifest" />
+  <link rel="manifest" href="../../img/site.webmanifest" />
 </head>
 <body>
 
 <header>
   <div class="nav-container">
-    <h1 class="site-title">Миры</h1>
-    <div>
-      <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
-    </div>
+    <h1 class="site-title"><a href="../../index.html">Миры</a> → 
+	<a href="../evora-world.html">World</a> → 
+	Информация</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
   </div>
 </header>
 
 <main>
-  <h1>Доступные миры</h1>
-  
+  <a href="../evora-world.html" class="back-link">← Назад к миру World</a>
+
+  <h1>Дополнительная информация</h1>
+  <p style="margin-bottom: 3rem;">Здесь будут собраны общие сведения о мире, правилах, технологиях и обществе World.</p>
+
   <div class="admin-controls">
-    <button class="admin-btn add" id="add-world-btn">
+    <button class="admin-btn add" id="add-info-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-      Добавить мир
+      Добавить информацию / раздел
     </button>
   </div>
-  
-  <div class="grid" style="margin-top: 2.5rem;">
-    <a href="evora/evora-world.html" class="card">
+
+  <div class="grid" style="margin-bottom: 4rem;">
+    <a href="hybrid/inf.html" class="card">
       <div class="card-header">
-        <h2 class="card-name">Эвора Био-Тех</h2>
+        <h2 class="card-name">INF</h2>
       </div>
       <div class="card-body">
-        <p>Мир генетических гибридов, академии и высоких технологий адаптации под экстремальные условия.</p>
+        <p>Краткая информация</p>
       </div>
     </a>
 
-    <a href="Golden Circle/goldencircle.html" class="card">
-      <div class="card-header">
-        <h2 class="card-name">Золотой круг</h2>
-      </div>
-      <div class="card-body">
-        <p>В Золотом Круге Аэлира разорённые аристократы в мифриле торгуют на равных с гоблинами, демонами и драконидами, поднимаясь от тележки у пристани до Великого Магистра Торговли.</p>
-      </div>
-    </a>
+    <!-- сюда можно будет добавлять новые карточки -->
+    <!--
+    <a href="locations/locations.html" class="card">...</a>
+    <a href="corporations/corporations.html" class="card">...</a>
+    -->
   </div>
+
 </main>
 
 <footer>
-  <p>© 2025–2026 — Личный лор-проект</p>
+  <p>World — справочная информация</p>
 </footer>
 
 <script>
@@ -113,9 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-  document.getElementById('add-world-btn')?.addEventListener('click', () => {
-    alert('Функция добавления нового мира в разработке.\nВ будущем здесь будет форма создания нового мира.');
-    // или: window.location.href = '/admin/new-world.html';
+  document.getElementById('add-info-btn')?.addEventListener('click', () => {
+    alert('Добавление новой статьи/раздела информации (технологии, локации, правила и т.д.) — в разработке');
   });
 </script>
 
