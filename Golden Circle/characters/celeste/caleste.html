@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Селеста — Золотой круг</title>
+  <link rel="stylesheet" href="../../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../../index.html">Миры</a> → 
+	<a href="../../goldencircle.html">Золотой круг</a> → 
+	<a href="../characters.html">Персонажи</a> → 
+	Селеста</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../characters.html" class="back-link">← К списку персонажей</a>
+  
+  <div class="admin-controls" style="justify-content: flex-end;">
+    <button class="admin-btn edit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать
+    </button>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:flex-start;">
+    <div style="flex: 0 0 340px; max-width:400px;">
+      <img 
+        id="main-character-image"
+        src="img/celeste1.png" 
+        alt="Эвелин"
+        style="width:100%; border-radius:12px; border:1px solid var(--border); display:block; transition: opacity 0.4s;"
+      >
+
+      <!-- Место для миниатюр (добавляй по мере появления картинок) -->
+      <div class="thumbnails" style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; justify-content: center;">
+        <img src="img/celeste1.png" class="thumb active" onclick="changeImage(this)" alt="основная">
+        <!-- примеры будущих картинок — раскомментируй и добавляй по мере необходимости -->
+        <img src="img/celeste2.png" class="thumb active" onclick="changeImage(this)" alt="основная">
+      </div>
+    </div>
+
+    <div style="flex:1; min-width:320px;">
+      <h1 class="name">Селеста Опаловая Чешуя-Блэкхарт</h1>
+      <p class="species">Нага с пробуждённой кровью Хрустальных Драконов</p>
+
+      <dl>
+        <dt>Возраст</dt><dd>29–31 год; После открытия Врат — 39–41 год</dd>
+        <dt>Пол</dt><dd>Женский</dd>
+        <dt>Рост</dt><dd>170 см + хвост (~4,5–5 метров)</dd>
+        <dt>Специальность</dt><dd>Соосновательница и дипломат «Моста Миров», глава Гильдии Кристаллографов, ректор и соосновательница Академии Рунической Хроматики. Мастер хрустальной энергетики и драконьей магии. Дипломат Хрустальных островов в Золотом Круге.</dd>
+      </dl>
+
+      <div class="section">
+        <h3 class="section-title">Внешность (кратко)</h3>
+        <p>Ослепительно красивая нага с перламутрово-опаловой чешуёй, которая переливается всеми цветами радуги в зависимости от освещения и настроения. Длинные серебристо-белые волосы, уложенные в сложные причёски с драгоценными камнями. Аметистовые глаза с вертикальными зрачками. Гибкое, грациозное тело.
+После ритуала Вечного Пламени может полностью трансформироваться в величественную хрустальную драконицу: полупрозрачная радужная чешуя, мощные крылья из чистой энергии, сияющие внутренним светом глаза и изящные рога. В обеих формах на коже проявляются светящиеся рунические узоры, гармонично сплетённые с драконьими символами.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Предыстория</h3>
+        <p>Дочь Великого Магистра Торговли лорда Сиразуша из влиятельного Дома Опаловой Чешуи. Встретилась с Эвелином на приёме в Серебряных Гильдиях. Сначала их отношения были деловыми и романтическими одновременно. После событий на Железном Рынке и путешествия на Хрустальные острова узнала, что её род — прямые потомки Хрустальных Драконов. Участвовала в ритуале открытия Врат и в ритуале Вечного Пламени, где полностью пробудила древнюю драконью кровь. Стала одной из ключевых фигур в объединении двух миров и укреплении барьера между измерениями.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Характер</h3>
+        <p>Умная, грациозная, уверенная в себе и обладающая острым деловым чутьём. Сочетает аристократическую утончённость с тёплой, искренней заботой о близких. Немного кокетлива и любит интеллектуальные беседы. Очень предана семье и своему делу. После пробуждения драконьей сущности стала ещё более величественной и спокойной, но сохранила живой ум и лёгкий юмор. Ценит красоту, знания и гармонию между традициями и прогрессом.</p>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Особая способность</h3>
+        <p>Полная трансформация между формой наги и хрустальной драконицы. Может манипулировать хрустальной энергетикой и драконьим пламенем (не обжигающим, а жизненным и стабилизирующим). Совместно с Эвелином создаёт и поддерживает стабильные межмировые порталы, усиливая руническую магию своей энергетикой. Способна пробуждать и направлять древние кристаллические потоки, создавать защитные коконы из света и кристаллов, а также видеть «нити» между мирами и живыми существами. Её присутствие стабилизирует магические бури и усиливает любые рунические конструкции.</p>
+      </div>
+
+    <div class="section">
+        <h3 class="section-title">Positive Prompt (для генерации):</h3>
+        <pre class="prompt">masterpiece, best quality, ultra-detailed, 8k, absurdres,
+beautiful female naga with awakened crystal dragon blood, 30 years old, extremely gorgeous and graceful,
+upper human-like torso of a stunning woman with flawless pale skin, long flowing silver-white hair styled in intricate elegant updo with embedded opals and crystals,
+amethyst eyes with vertical dragon pupils, gentle yet confident expression, slight seductive smile,
+iridescent opal scales covering her long powerful serpentine tail (total length ~5 meters), scales shimmer with rainbow colors depending on light and mood,
+glowing crystalline runes and dragon symbols flowing across her body and tail,
+wearing luxurious diplomatic attire with crystal embellishments, elegant silk and crystalline jewelry in white, silver and amethyst tones,
+sometimes shown in full crystal dragoness form: majestic winged dragon with translucent rainbow crystalline scales, powerful energy wings, glowing amethyst eyes, elegant crystal horns, radiant inner light,
+delicate glowing runic patterns on skin, ethereal magical aura, floating crystal particles,
+standing confidently in elegant pose, sophisticated and regal atmosphere,
+background of crystal spires, floating islands and shimmering portals,
+highly detailed scales and skin texture, perfect anatomy, intricate hair, sharp focus, cinematic lighting, soft iridescent highlights</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Negative prompt (для генерации:)</h3>
+        <pre class="prompt">lowres, bad anatomy, bad hands, deformed, mutated, extra limbs, missing limbs, blurry, low quality, worst quality,
+text, watermark, signature, error, cropped, jpeg artifacts,
+ugly, disfigured, morbid, gross proportions, malformed limbs, fused fingers,
+cartoon, chibi, anime, 3d render, cgi, plastic skin, doll-like,
+overexposed, underexposed, grainy,
+child, underage, loli, shota,
+nsfw, nude, fully naked, exposed breasts, explicit, erotic pose, aroused</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Flux Positive Prompt (для генерации):</h3>
+        <pre class="prompt">A breathtaking portrait of Celeste Opalscale Blackheart, a beautiful female naga-dragon hybrid around 30 years old. She has the graceful upper body of an elegant woman with long, silky silver-white hair in an intricate aristocratic hairstyle adorned with opals and crystals. Her eyes are striking amethyst with vertical dragon pupils. Her lower body is a long, powerful serpentine tail covered in shimmering iridescent opal scales that shift through all colors of the rainbow depending on the light and her emotions.
+Glowing crystalline runes and ancient dragon symbols dance across her skin and scales. She wears luxurious diplomatic robes with crystal accents in silver, white and amethyst tones, radiating sophistication and power.
+Sometimes depicted in her full awakened crystal dragoness form: a majestic winged dragon with translucent rainbow crystalline scales, large wings made of pure energy, elegant crystal horns and radiant amethyst eyes glowing with inner light.
+She stands with regal confidence and gentle warmth, surrounded by floating crystal shards and soft magical glow. Ethereal atmosphere, intricate details on scales and hair, cinematic lighting with iridescent highlights, fantasy concept art, masterpiece, highly detailed, sharp focus, natural yet magical beauty.</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Flux Negative Prompt (для генерации):</h3>
+        <pre class="prompt">blurry, low quality, deformed, bad anatomy, extra limbs, fused fingers, mutated hands, poorly drawn face, bad proportions,
+text, watermark, logo, signature,
+cartoon, anime, 3d render, plastic skin, doll-like,
+child, underage, loli,
+nude, fully naked, explicit, erotic, sexual pose, exposed body</pre>
+      </div>
+	  
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox / модальное увеличение картинки -->
+<div id="image-lightbox" class="lightbox">
+  <span class="lightbox-close">×</span>
+  <img class="lightbox-content" id="lightbox-img" src="" alt="Увеличенное изображение персонажа">
+</div>
+
+<div class="lightbox-caption" id="lightbox-caption"></div>
+
+<footer>
+  <a href="https://mynickname.com/197371"><img src="../../../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
+  <a href="https://mynickname.com/197371"><img src="../../../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
+  <p>Селеста — Золотой круг</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+function changeImage(thumb) {
+  const mainImg = document.getElementById('main-character-image');
+  mainImg.style.opacity = '0';
+  
+  setTimeout(() => {
+    mainImg.src = thumb.src;
+    mainImg.style.opacity = '1';
+    
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }, 300);
+}
+
+// Стили для миниатюр (можно вынести в main.css позже)
+const style = document.createElement('style');
+style.textContent = `
+  .thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  .thumb:hover,
+  .thumb.active {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: scale(1.08);
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+// Lightbox для главной картинки персонажа
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('main-character-image');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  if (!mainImage || !lightbox) return;
+
+  // Клик по главной картинке → открыть lightbox
+  mainImage.style.cursor = 'zoom-in'; // визуальная подсказка
+
+  mainImage.addEventListener('click', () => {
+    lightboxImg.src = mainImage.src;
+    lightboxImg.alt = mainImage.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // блокируем скролл фона
+  });
+
+  // Закрытие
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Клик по фону (вне картинки)
+  lightbox.addEventListener('click', (e) => {
+  // Если кликнули на фон ИЛИ непосредственно на картинку
+  if (e.target === lightboxImg || e.target === closeBtn) {
+    closeLightbox();
+  }
+});
+
+  // Клавиша Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+});
+  document.getElementById('lightbox-caption').textContent = mainImage.alt;
+</script>
+
+<script>
+  document.querySelector('.admin-btn.edit')?.addEventListener('click', () => {
+    alert('Редактирование этой записи — в разработке');
+  });
+</script>
+
+</body>
+</html>

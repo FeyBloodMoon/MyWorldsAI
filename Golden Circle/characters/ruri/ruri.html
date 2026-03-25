@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Эвелин — Золотой круг</title>
+  <link rel="stylesheet" href="../../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../../index.html">Миры</a> → 
+	<a href="../../goldencircle.html">Золотой круг</a> → 
+	<a href="../characters.html">Персонажи</a> → 
+	Эвелин</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../characters.html" class="back-link">← К списку персонажей</a>
+  
+  <div class="admin-controls" style="justify-content: flex-end;">
+    <button class="admin-btn edit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать
+    </button>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:flex-start;">
+    <div style="flex: 0 0 340px; max-width:400px;">
+      <img 
+        id="main-character-image"
+        src="img/ruri1.png" 
+        alt="Эвелин"
+        style="width:100%; border-radius:12px; border:1px solid var(--border); display:block; transition: opacity 0.4s;"
+      >
+
+      <!-- Место для миниатюр (добавляй по мере появления картинок) -->
+      <div class="thumbnails" style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; justify-content: center;">
+        <img src="img/ruri1.png" class="thumb active" onclick="changeImage(this)" alt="основная">
+        <!-- примеры будущих картинок — раскомментируй и добавляй по мере необходимости -->
+		<img src="img/ruri2.png" class="thumb active" onclick="changeImage(this)" alt="работает">
+      </div>
+    </div>
+
+    <div style="flex:1; min-width:320px;">
+      <h1 class="name">Рури Песчаный Ветер</h1>
+      <p class="species">Фенек</p>
+
+      <dl>
+        <dt>Возраст</dt><dd>28–30 лет; После открытия Врат — 38–40 лет</dd>
+        <dt>Пол</dt><dd>Мужской</dd>
+        <dt>Рост</dt><dd>165–168 см</dd>
+        <dt>Специальность</dt><dd>Великий Магистр Торговли, Хранитель Границ Между Мирами, мастер-зверолов и укротитель легендарных существ. Основатель и глава сети заповедников «Оазис». Специалист по уходу, приручению и сохранению редких и магических животных.</dd>
+      </dl>
+
+      <div class="section">
+        <h3 class="section-title">Внешность (кратко)</h3>
+        <p>Стройный фенек с густой песочно-золотистой шерстью, большими выразительными ушами и пушистым хвостом. Янтарно-золотые глаза, которые светятся серебристым светом в моменты сильных эмоций или использования силы. На теле иногда проявляются древние пустынные узоры в виде светящихся песчаных вихрей. Носит практичную, но изысканную одежду в пустынном стиле с элементами хрустальной отделки и ошейниками-печатями высокого ранга. Рядом с ним почти всегда присутствуют верные спутники — лисица Ния и ястреб Кайро.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Предыстория</h3>
+        <p>Начинал как скромный уличный торговец травами и алхимическими ингредиентами в Алхимическом квартале Золотого Круга, владелец маленькой лавки «Пустынный ветер». Рос в пустыне Харр, не зная своего истинного происхождения. После встречи с караваном Мастера Тиаго и событий на Железном Рынке узнал, что является потомком древнего Дома Песчаной Бури с Хрустальных островов. Прошёл путь от бедного торговца до уважаемого мастера, а затем — до одного из ключевых наследников древних родов. Укротил легендарную Песчаную Химеру Шаи, открыл Хрустальные Врата и стал одним из архитекторов соединения двух миров.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Характер</h3>
+        <p>Добрый, сострадательный и глубоко заботливый, особенно по отношению к животным и слабым. Спокоен и рассудителен, но в критические моменты проявляет твёрдую решимость и смелость. Ценит гармонию, равновесие и свободу живых существ. Верен друзьям и семье, немного застенчив в личных вопросах, но обладает тихой внутренней силой и мудростью. Не жаден — всегда готов помогать и делиться знаниями. После благословения Изначальной стал ещё более умиротворённым и гармоничным.</p>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Особая способность</h3>
+        <p>Глубокая духовная и ментальная связь с животными и магическими существами. Может понимать их язык, чувствовать эмоции и нужды на большом расстоянии, устанавливать истинное приручение через «танец душ». После союза с Изначальной (Лираной) и Арианной его связь усилилась до уровня, позволяющего ощущать всех живых существ в радиусе мили и создавать небольшие порталы с помощью Шаи. Также обладает лёгким контролем над песчаными бурями и пустынной магией своего древнего дома.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Positive Prompt (для генерации):</h3>
+        <pre class="prompt">masterpiece, best quality, ultra-detailed, 8k, anthropomorphic male fennec fox, 28-30 years old, slender and agile build, height 165-168 cm, dense sandy-golden fur with soft gradients, very large expressive ears with black tips, big fluffy tail, amber-golden eyes that glow with silver light, ancient glowing sand swirl patterns on body, calm and kind expression, gentle wise look, wearing practical yet elegant desert-style clothing with crystal accents, high-rank seal collars, flowing fabrics in beige, gold and turquoise tones, standing confidently, surrounded by magical aura of sand and wind, small desert fox Niya and hawk Kairo next to him, background of golden desert with ancient crystal gates and oases, soft warm lighting, cinematic atmosphere, highly detailed fur texture, realistic anatomy, perfect hands, sharp focus</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Negative prompt (для генерации:)</h3>
+        <pre class="prompt">lowres, bad anatomy, bad hands, deformed, mutated, extra limbs, missing limbs, blurry, low quality, worst quality, text, watermark, signature, error, cropped, jpeg artifacts, compression artifacts, ugly, disfigured, morbid, gross proportions, malformed limbs, fused fingers, cartoon, anime, 3d render, cgi, plastic skin, doll-like, overexposed, underexposed, grainy, noisy, young child, loli, shota, underage, nsfw, nude, exposed, erotic pose</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Flux Positive Prompt (для генерации):</h3>
+        <pre class="prompt">A highly detailed cinematic portrait of RuRi the Sand Wind, an anthropomorphic male fennec fox around 30 years old, slender and graceful build, 167 cm tall. He has luxurious dense sandy-golden fur, enormous expressive ears with dark tips, a very large fluffy tail, and piercing amber-golden eyes that subtly glow with silver light. Ancient glowing sand vortex patterns occasionally appear on his fur. He wears elegant yet practical desert adventurer clothing with crystal embellishments and high-rank seal collars in beige, gold and turquoise colors. Calm, kind and wise expression, gentle smile. Always accompanied by his loyal companions: a small graceful desert fox named Niya and a proud hawk named Kairo. Soft warm desert lighting, magical sand particles floating in the air, ancient crystal gates and oases in the background. Masterpiece, intricate fur details, perfect anatomy, sharp focus, cinematic composition, natural colors, highly realistic yet fantastical atmosphere.</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Flux Negative Prompt (для генерации):</h3>
+        <pre class="prompt">blurry, low quality, deformed, bad anatomy, extra limbs, fused fingers, mutated hands, poorly drawn face, bad proportions, text, watermark, logo, signature, cartoon, anime style, 3d render, plastic, doll, child, underage, young boy, loli, nude, nsfw, erotic, sexual pose, exposed genitals</pre>
+      </div>
+	  
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox / модальное увеличение картинки -->
+<div id="image-lightbox" class="lightbox">
+  <span class="lightbox-close">×</span>
+  <img class="lightbox-content" id="lightbox-img" src="" alt="Увеличенное изображение персонажа">
+</div>
+
+<div class="lightbox-caption" id="lightbox-caption"></div>
+
+<footer>
+  <a href="https://mynickname.com/197371"><img src="../../../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
+  <a href="https://mynickname.com/197371"><img src="../../../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
+  <p>Рури Песчаный Ветер — Золотой круг</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+function changeImage(thumb) {
+  const mainImg = document.getElementById('main-character-image');
+  mainImg.style.opacity = '0';
+  
+  setTimeout(() => {
+    mainImg.src = thumb.src;
+    mainImg.style.opacity = '1';
+    
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }, 300);
+}
+
+// Стили для миниатюр (можно вынести в main.css позже)
+const style = document.createElement('style');
+style.textContent = `
+  .thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  .thumb:hover,
+  .thumb.active {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: scale(1.08);
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+// Lightbox для главной картинки персонажа
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('main-character-image');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  if (!mainImage || !lightbox) return;
+
+  // Клик по главной картинке → открыть lightbox
+  mainImage.style.cursor = 'zoom-in'; // визуальная подсказка
+
+  mainImage.addEventListener('click', () => {
+    lightboxImg.src = mainImage.src;
+    lightboxImg.alt = mainImage.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // блокируем скролл фона
+  });
+
+  // Закрытие
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Клик по фону (вне картинки)
+  lightbox.addEventListener('click', (e) => {
+  // Если кликнули на фон ИЛИ непосредственно на картинку
+  if (e.target === lightboxImg || e.target === closeBtn) {
+    closeLightbox();
+  }
+});
+
+  // Клавиша Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+});
+  document.getElementById('lightbox-caption').textContent = mainImage.alt;
+</script>
+
+<script>
+  document.querySelector('.admin-btn.edit')?.addEventListener('click', () => {
+    alert('Редактирование этой записи — в разработке');
+  });
+</script>
+
+</body>
+</html>
