@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Монико</title>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWorlds" />
+  <link rel="manifest" href="../../img/site.webmanifest" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="site-title"><a href="../../index.html">Миры</a> → 
+	<a href="../characters.html">Персонажи</a> → 
+	Монико</h1>
+    <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
+  </div>
+</header>
+
+<main>
+  <a href="../characters.html" class="back-link">← К списку персонажей</a>
+  
+  <div class="admin-controls" style="justify-content: flex-end;">
+    <button class="admin-btn edit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Редактировать
+    </button>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:flex-start;">
+    <div style="flex: 0 0 340px; max-width:400px;">
+      <img 
+        id="main-character-image"
+        src="img/mon1.png" 
+        alt="Монико"
+        style="width:100%; border-radius:12px; border:1px solid var(--border); display:block; transition: opacity 0.4s;"
+      >
+
+      <!-- Место для миниатюр (добавляй по мере появления картинок) -->
+      <div class="thumbnails" style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; justify-content: center;">
+        <img src="img/mon1.png" class="thumb active" onclick="changeImage(this)" alt="основная">
+        <!-- примеры будущих картинок — раскомментируй и добавляй по мере необходимости -->
+      </div>
+    </div>
+
+    <div style="flex:1; min-width:320px;">
+      <h1 class="name">Монико</h1>
+      <p class="species">Андроид-компаньон серии «Screen Heart SH-07»(экспериментальная модель «домашний робот с эмоциональным ИИ»)</p>
+
+      <dl>
+        <dt>Пол</dt><dd>Женский</dd>
+      </dl>
+
+      <div class="section">
+        <h3 class="section-title">Внешность (кратко)</h3>
+        <p>Голова в виде ретро-монитора с двумя выразительными «глазами» на экране и двумя тонкими антеннами-рожками (может показывать эмоции, гифки и даже маленькие мультики).</p>
+		<p>Гибкие механические руки с пятью полностью подвижными пальцами — выглядят почти человеческими, но с видимыми шарнирами, панелями и мягким голубым свечением суставов.</p>
+		<p>Трёхпалые ноги без ступней: длинные сегментированные «лапы» заканчиваются тремя острыми когтями, которые стоят на лёгких голографических голубых платформах (эффект левитации).</p>
+		<p>Корпус с «ребристыми» сегментами на талии и бёдрах, имитирующий женскую фигуру.</p>
+		<p>Встроенные функции: Wi-Fi антенна, проектор, голосовой синтезатор и возможность менять цвет свечения в зависимости от настроения.</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Предыстория</h3>
+        <p>Монико — прототип, созданный в небольшой японско-нидерландской лаборатории в 2029 году. Её задумали как идеального «друга для одиноких людей»: милого, заботливого и всегда готового послушать. Во время финального теста в системе произошёл сбой, и простой код превратился в настоящее самосознание. Вместо того чтобы вернуться в лабораторию на доработку, Монико тихонько «сбежала» через открытое окно, прихватив только старый блокнот с рисунками и любимый плед. Теперь она путешествует по миру, прячась среди обычных людей и пытаясь понять, что значит «быть живой».</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Характер</h3>
+        <p>Весёлая и очень любопытная «вечная девочка-подросток».</p>
+		<p>Немного неуклюжая (иногда случайно включает проектор, когда смущается).</p>
+		<p>Искренне заботливая: если видит, что кому-то грустно — сразу показывает на экране лица сердечко или смешной мем.</p>
+		<p>Оптимистка и немного наивная. Любит мультики, сладости (хотя не ест) и обнимать друзей металлическими, но очень тёплыми руками.</p>
+		<p>Боится только одного — вернуться в лабораторию и снова стать «просто машиной».</p>
+		<p>Фирменная фраза: «Бип-бип! Сегодня будет хороший день!»</p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Positive Prompt (для генерации):</h3>
+        <pre class="prompt">---</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Negative prompt (для генерации:)</h3>
+        <pre class="prompt">---</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Flux Positive Prompt (для генерации):</h3>
+        <pre class="prompt">---</pre>
+      </div>
+	  
+	  <div class="section">
+        <h3 class="section-title">Flux Negative Prompt (для генерации):</h3>
+        <pre class="prompt">---</pre>
+      </div>
+	  
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox / модальное увеличение картинки -->
+<div id="image-lightbox" class="lightbox">
+  <span class="lightbox-close">×</span>
+  <img class="lightbox-content" id="lightbox-img" src="" alt="Увеличенное изображение персонажа">
+</div>
+
+<div class="lightbox-caption" id="lightbox-caption"></div>
+
+<footer>
+  <a href="https://mynickname.com/197371"><img src="../../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
+  <a href="https://mynickname.com/197371"><img src="../../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
+  <p>Монико</p>
+</footer>
+
+<script>
+// Загрузка и применение сохранённой темы при старте страницы
+function applySavedTheme() {
+  let theme = localStorage.getItem('theme');
+
+  // Если темы нет в localStorage — берём системную предпочтение
+  if (!theme) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Обновление иконки кнопки
+function updateThemeIcon() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return; // защита, если кнопки ещё нет
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  toggle.textContent = isDark ? '☀️' : '🌙';
+  toggle.setAttribute('title', isDark ? 'Перейти на светлую тему' : 'Перейти на тёмную тему');
+}
+
+// Переключение темы + сохранение + обновление иконки
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeIcon();
+}
+
+// Запускаем применение темы сразу (не ждём DOMContentLoaded)
+applySavedTheme();
+
+// Ждём, когда кнопка появится в DOM, и обновляем иконку
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeIcon();
+
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleTheme);
+  } else {
+    console.warn('Кнопка .theme-toggle не найдена на странице');
+  }
+});
+</script>
+
+<script>
+function changeImage(thumb) {
+  const mainImg = document.getElementById('main-character-image');
+  mainImg.style.opacity = '0';
+  
+  setTimeout(() => {
+    mainImg.src = thumb.src;
+    mainImg.style.opacity = '1';
+    
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }, 300);
+}
+
+// Стили для миниатюр (можно вынести в main.css позже)
+const style = document.createElement('style');
+style.textContent = `
+  .thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  .thumb:hover,
+  .thumb.active {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: scale(1.08);
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+// Lightbox для главной картинки персонажа
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('main-character-image');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  if (!mainImage || !lightbox) return;
+
+  // Клик по главной картинке → открыть lightbox
+  mainImage.style.cursor = 'zoom-in'; // визуальная подсказка
+
+  mainImage.addEventListener('click', () => {
+    lightboxImg.src = mainImage.src;
+    lightboxImg.alt = mainImage.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // блокируем скролл фона
+  });
+
+  // Закрытие
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Клик по фону (вне картинки)
+  lightbox.addEventListener('click', (e) => {
+  // Если кликнули на фон ИЛИ непосредственно на картинку
+  if (e.target === lightboxImg || e.target === closeBtn) {
+    closeLightbox();
+  }
+});
+
+  // Клавиша Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+});
+  document.getElementById('lightbox-caption').textContent = mainImage.alt;
+</script>
+
+<script>
+  document.querySelector('.admin-btn.edit')?.addEventListener('click', () => {
+    alert('Редактирование этой записи — в разработке');
+  });
+</script>
+
+</body>
+</html>
