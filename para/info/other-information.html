@@ -3,54 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Персонажи</title>
-  <link rel="stylesheet" href="../css/main.css"/>
-  <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
-  <link rel="shortcut icon" href="../img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <title>Дополнительная информация — World</title>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWorlds" />
-  <link rel="manifest" href="../img/site.webmanifest" />
+  <link rel="manifest" href="../../img/site.webmanifest" />
 </head>
 <body>
 
 <header>
   <div class="nav-container">
-    <h1 class="site-title"><a href="../index.html">Миры</a> → 
-	Персонажи</h1>
+    <h1 class="site-title"><a href="../../index.html">Миры</a> → 
+	<a href="../evora-world.html">World</a> → 
+	Информация</h1>
     <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
   </div>
 </header>
 
 <main>
-  <a href="../index.html" class="back-link">← Назад к мирам</a>
+  <a href="../evora-world.html" class="back-link">← Назад к миру World</a>
 
-  <h1>Персонажи</h1>
-  
+  <h1>Дополнительная информация</h1>
+  <p style="margin-bottom: 3rem;">Здесь будут собраны общие сведения о мире, правилах, технологиях и обществе World.</p>
+
   <div class="admin-controls">
-    <button class="admin-btn add" id="add-character-btn">
+    <button class="admin-btn add" id="add-info-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-      Добавить персонажа
+      Добавить информацию / раздел
     </button>
   </div>
 
-  <div class="grid">
-    <a href="mon/mon.html" class="card">
-      <img src="mon/img/mon1.png" alt="Мия Юки-цубаса" style="width:100%; height:auto; display:block;">
+  <div class="grid" style="margin-bottom: 4rem;">
+    <a href="hybrid/inf.html" class="card">
+      <div class="card-header">
+        <h2 class="card-name">INF</h2>
+      </div>
       <div class="card-body">
-        <h3 class="card-name">Монико</h3>
-        <p class="card-species">Андроид-компаньон серии «Screen Heart SH-07»(экспериментальная модель «домашний робот с эмоциональным ИИ»)</p>
-        <p>Весёлая и очень любопытная «вечная девочка-подросток».</p>
+        <p>Краткая информация</p>
       </div>
     </a>
-    </a>
+
+    <!-- сюда можно будет добавлять новые карточки -->
+    <!--
+    <a href="locations/locations.html" class="card">...</a>
+    <a href="corporations/corporations.html" class="card">...</a>
+    -->
   </div>
+
 </main>
 
 <footer>
-  <a href="https://mynickname.com/197371"><img src="../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
-  <a href="https://mynickname.com/197371"><img src="../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
-  <p>Персонажи</p>
+  <a href="https://mynickname.com/197371"><img src="../../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
+  <a href="https://mynickname.com/197371"><img src="../../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
+  <p>World — справочная информация</p>
 </footer>
 
 <script>
@@ -108,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-  document.getElementById('add-character-btn')?.addEventListener('click', () => {
-    alert('Функция добавления нового персонажа в разработке.\nВ будущем — форма с полями: имя, вид, промпт, фото и т.д.');
+  document.getElementById('add-info-btn')?.addEventListener('click', () => {
+    alert('Добавление новой статьи/раздела информации (технологии, локации, правила и т.д.) — в разработке');
   });
 </script>
 

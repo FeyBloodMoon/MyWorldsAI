@@ -3,54 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Персонажи</title>
-  <link rel="stylesheet" href="../css/main.css"/>
-  <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
-  <link rel="shortcut icon" href="../img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <title>INF — World</title>
+  <link rel="stylesheet" href="../../../css/main.css"/>
+  <link rel="icon" type="image/png" href="../../../img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../../img/favicon.svg" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWorlds" />
-  <link rel="manifest" href="../img/site.webmanifest" />
+  <link rel="manifest" href="../../../img/site.webmanifest" />
 </head>
 <body>
 
 <header>
   <div class="nav-container">
-    <h1 class="site-title"><a href="../index.html">Миры</a> → 
-	Персонажи</h1>
+    <h1 class="site-title">
+      <a href="../../../index.html">Миры</a> → 
+      <a href="../../evora-world.html">World</a> → 
+      <a href="../other-information.html">Информация</a> → 
+      INF
+    </h1>
     <button class="theme-toggle" title="Сменить тему">☀️/🌙</button>
   </div>
 </header>
 
 <main>
-  <a href="../index.html" class="back-link">← Назад к мирам</a>
+  <a href="../other-information.html" class="back-link">← Назад к дополнительной информации</a>
 
-  <h1>Персонажи</h1>
-  
-  <div class="admin-controls">
-    <button class="admin-btn add" id="add-character-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-      Добавить персонажа
-    </button>
-  </div>
+  <h1>INF</h1>
 
-  <div class="grid">
-    <a href="mon/mon.html" class="card">
-      <img src="mon/img/mon1.png" alt="Мия Юки-цубаса" style="width:100%; height:auto; display:block;">
-      <div class="card-body">
-        <h3 class="card-name">Монико</h3>
-        <p class="card-species">Андроид-компаньон серии «Screen Heart SH-07»(экспериментальная модель «домашний робот с эмоциональным ИИ»)</p>
-        <p>Весёлая и очень любопытная «вечная девочка-подросток».</p>
-      </div>
-    </a>
-    </a>
-  </div>
+  <div class="section" style="margin-top: 2.5rem;">
+    <p style="font-size: 1.15rem; margin-bottom: 2rem;">
+      Инфа1 
+      <strong>Выделить</strong>.
+    </p>
+
+    <h3 class="section-title">Инфа2</h3>
+    <ol style="line-height: 1.8; margin: 1.2rem 0 2.5rem 1.8rem; font-size: 1.05rem;">
+      <li>Пункт1</li>
+      <li>Пункт2
+        <ul style="margin: 0.8rem 0 0.8rem 2rem;">
+          <li>ПодПункт1</li>
+          <li>ПодПункт2</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3 class="section-title">Инфа3</h3>
+    <p>
+	Описание
+    </p>
+
+    <h3 class="section-title">Перече1</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1.5rem 0;">
+      <span style="background: var(--bg-card); padding: 0.6rem 1.2rem; border-radius: 999px; border: 1px solid var(--border);">Пример1</span>
+      <span style="background: var(--bg-card); padding: 0.6rem 1.2rem; border-radius: 999px; border: 1px solid var(--border);">Пример2</span>
+    </div>
+
 </main>
 
 <footer>
-  <a href="https://mynickname.com/197371"><img src="../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
-  <a href="https://mynickname.com/197371"><img src="../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
-  <p>Персонажи</p>
+  <a href="https://mynickname.com/197371"><img src="../../../img/Zwerg Pferd.gif" alt="Zwerg Pferd" border="1" /></a>
+  <a href="https://mynickname.com/197371"><img src="../../../img/FeyBM.gif" alt="FeyBM" border="1" /></a>
+  <p>World — Inf</p>
 </footer>
 
 <script>
@@ -105,12 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Кнопка .theme-toggle не найдена на странице');
   }
 });
-</script>
-
-<script>
-  document.getElementById('add-character-btn')?.addEventListener('click', () => {
-    alert('Функция добавления нового персонажа в разработке.\nВ будущем — форма с полями: имя, вид, промпт, фото и т.д.');
-  });
 </script>
 
 </body>
